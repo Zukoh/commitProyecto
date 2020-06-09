@@ -42,3 +42,13 @@ body{
     margin-top: 25px;
     margin-left: 90px;
 }
+
+.btn{
+    display: block;
+    height: 30px;
+    width: 70px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
