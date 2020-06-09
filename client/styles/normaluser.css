@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0mm;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rebeccapurple;
+    color: white;
+    height: 70px;
+    align-items: center;
+    padding: 15px;
+}
+
+
+.localcontainer{
+    background-color: teal;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boliches, .restaurantes, .eventos{
+    height: 150px;
+    background-color: tomato;
+    width: 180px;
+}
+
+.restaurantes{
+    background-color: pink;
+}

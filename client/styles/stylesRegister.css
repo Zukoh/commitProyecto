@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+.circle{
+    background-color: black;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
+
+.container{
+    height: 420px;
+    border: 2px solid black;
+    width: 400px;
+    margin-top: 100px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: teal;
+}
+
+.user{
+    margin-top:35px;
+    margin-bottom:35px;
+    margin-left: 40px;
+}
+.pass{
+    margin-left: 45px;
+}
+
+.mail{
+    margin-top:35px;
+    margin-left: 76px;
+}
+
+.dni{
+    margin-top:35px;
+    margin-left: 76px;
+}
+
+.linklogin{
+    margin-left: 110px;
+    margin-top: 15px;
+}

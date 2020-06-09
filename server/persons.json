@@ -1,0 +1,14 @@
+{
+    "personas" : [
+    {
+    "nombre" : "Alexis",
+    "apellido": "Crespo",
+    "mail" : "alexis.a.crespo@gmail.com",
+    "pass" : "123456",
+    "dni": "38380476",
+    "edad": 24,
+    "user":"normal"
+}
+
+]
+}
