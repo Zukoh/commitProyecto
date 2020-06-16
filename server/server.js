@@ -135,15 +135,15 @@ app.get("/local", (req, res) =>{
 })
 
 app.get("/homelocal", (req, res)=>{
+  console.log("HOLAAA")
   valid.dameReservas("Los Maizales", result =>{
-    
+    console.log(result.valid)
     if (result.valid){
       
       res.render("homelocal", {
         layout: "main", 
-        message: {
-            class:"bloque-reserva",
-            nombre: "hola?",
+        reserva: {
+            nombre: result.nombre,
             hora: result.hora,
             montopagado:result.montopagado,
             cantidad:result.cantpersonas

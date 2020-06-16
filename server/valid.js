@@ -248,23 +248,17 @@ const newReserva = (nombre, montopag, cantpersonas, hora, cbR) =>{
 }
 
 const dameReservas = (nombre, cbResult) => {
-
   mongodb.MongoClient.connect(mongoURL, (err, client) => {
-
     if (err) {
-
       cbResult({
         success: false
       });
-
     } else {
-
       const proyectoDB = client.db("proyecto");
       const reservaCol = proyectoDB.collection("reservas");
-
       reservaCol.findOne({ nombre: nombre }, (err, result) => {
-
         if (err) {
+          console.log(err);
           cbResult({
             valid: false
           });
