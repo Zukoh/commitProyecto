@@ -1,0 +1,48 @@
+<div class="aside">
+    <a href="/homelocal"><div class="homelocal"id="restaurantes">Reservas</div></a>
+    <a href="/local"><div class="local">Local</div></a> 
+   
+    
+</div>
+<div class="contenido">
+    <h1 class="title-contenido">Datos de tu local</h1>
+    <p class="subt-disp">Por favor ingrese los datos pedidos de su local para que los clientes lo puedan ver</p>
+  <div class="content-disponibilidad">
+    <form action="/local" method="post">
+  
+  <div class="input-group">
+    <label for="nombre">Nombre del local:</label>
+    <input type="text" name="nombre" id="nombre">
+  </div>
+
+    <div class="input-group">
+    <label for="direccion">Direccion:</label>
+    <input type="text" name="direccion" id="direccion">
+  </div>
+
+   <div class="input-group">
+    <label for="minReserva">Precio minimo de reserva: $</label>
+    <input type="text" name="minReserva" id="minRreserva">
+  </div>
+
+
+  <div class="input-group">
+    <label for="diaDesde">Dias, de:</label>
+    <input type="text" name="diaDesde" id="diaDesde">
+  </div>
+
+  <div class="input-group">
+    <label for="horarios">Horarios, de:</label>
+    <input type="text" name="horarios" id="horarios">
+    
+
+  </div>
+
+  <input class="local-btn" type="submit" value="Aplicar!">
+
+</form>
+{{#if message}}
+  <p class="{{message.class}}">{{message.text}}</p>
+{{/if}}
+</div>
+</div>

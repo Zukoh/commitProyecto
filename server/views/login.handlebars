@@ -1,0 +1,31 @@
+<div class="contenedor">
+  <div class="content">
+<h2 class="title-logeo">Logea!</h2>
+
+<form action="/login" method="post">
+
+  <div class="input-group">
+    <label for="user">Username</label>
+    <input type="text" name="user" id="user">
+  </div>
+
+  <div class="input-group">
+    <label for="pass">Password</label>
+    <input type="password" name="pass" id="pass">
+  </div>
+
+  <input class="login-btn" type="submit" value="Logear!">
+
+</form>
+
+<a class="signup-message" href="/register">No estas registrado? Registrate ahora!</a>
+
+{{#if message}}
+  <p class="message-{{message.class}}">{{message.text}}</p>
+{{/if}}
+</div>
+</div>
+
+<div class="imagen">
+  
+</div>

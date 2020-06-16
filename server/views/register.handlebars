@@ -1,0 +1,50 @@
+<div class="contenedor">
+<div class="content">
+<h2>Registro</h2>
+
+<form action="/register" method="post">
+
+  <div class="input-group">
+    <label for="user">Mail</label>
+    <input type="text" name="user" id="user">
+  </div>
+
+  <div class="input-group">
+    <label for="pass">Contraseña</label>
+    <input type="password" name="pass" id="pass">
+  </div>
+
+  <div class="input-group">
+    <label for="passRepeat">Repetir contraseña</label>
+    <input type="password" name="passRepeat" id="passRepeat">
+  </div>
+
+  <div class="input-group">
+    <label for="dni">DNI</label>
+    <input type="text" name="dni" id="dni">
+  </div>
+
+  <div class="input-group">
+    <label for="edad">Edad</label>
+    <input type="text" name="edad" id="edad">
+  </div>
+
+  <div class="input-group">
+    <label for="userN">Quiero reservar</label>
+    <input type="radio" name="reserva" id="userReserva"><br>
+    <label for="userA">Quiero promocionar local</label>
+    <input type="radio" name="local" id="userLocal">
+  </div>
+
+  <input class="login-btn" type="submit" value="Registrate">
+
+</form>
+<a class="signup-message" href="/login">Ya estas registrado? Logea ahora!</a>
+{{#if message}}
+  <p class="message-{{message.class}}">{{message.text}}</p>
+{{/if}}
+</div>
+</div>
+<div class="imagen">
+  
+</div>

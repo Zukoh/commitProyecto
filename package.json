@@ -1,21 +1,13 @@
 {
-  "name": "proyecto",
+  "name": "server-iii",
   "version": "1.0.0",
-  "description": "Aplicacion de reservas",
-  "main": "server/server.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "start": "node server/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zukoh/commitProyecto.git"
-  },
-  "author": "Alexis Crespo",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Zukoh/commitProyecto/issues"
-  },
-  "homepage": "https://github.com/Zukoh/commitProyecto#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",

@@ -1,0 +1,47 @@
+<div class="aside">
+    <a href="/home"><div class=" restaurantes"id="restaurantes">Restaurantes</div></a>
+    <a href="/eventos"><div class="eventos" id="eventos">Eventos</div></a> 
+    <a href="/boliches"><div class="boliches" id="boliches">Boliches</div></a>
+    <a href="/canchas"><div class="canchas" id="canchas">Canchas</div></a>
+</div>
+<div class="contenido">
+    <h1 class="title-contenido">Reservar</h1>
+        <p class="subt-disp">Por favor ingrese los datos pedidos para su reserva</p>
+  <div class="content-disponibilidad">
+    <form action="/reservar" method="post">
+  
+  <div class="input-group">
+    <label for="nombre">¿A nombre de quien la reserva?</label>
+    <input type="text" name="nombre" id="nombre">
+  </div>
+
+    <div class="input-group">
+    <label for="montopag">¿Cuanto vas a pagar de seña? $</label>
+    <input type="text" name="montopag" id="montopag">
+  </div>
+
+   <div class="input-group">
+    <label for="cantpersonas">¿Cuantas personas vienen?</label>
+    <input type="text" name="cantpersonas" id="cantpersonas">
+  </div>
+
+
+  <div class="input-group">
+    <label for="hora">¿A que hora llegaran?</label>
+    <input type="text" name="hora" id="hora">
+  </div>
+
+  
+
+  <input class="local-btn" type="submit" value="Reservar!">
+
+</form>
+{{#if message}}
+  <p class="{{message.class}}">{{message.text}}</p>
+{{/if}}
+    </div>
+
+
+
+
+
