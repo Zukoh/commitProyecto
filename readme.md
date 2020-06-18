@@ -16,5 +16,28 @@ Simplemente tener instalado _NodeJS_**.
 
 [NodeJS](https://nodejs.org/es/) :green_heart:
 
+# ¿Como lo ejecuto una vez clonado el repositorio? :worried:
+
+* Ejecutar en la conosola el comando __npm install__
+* Ejecutar en la consola el comando __npm start__
+
+# Paso a paso por la app :running:
+
+* Primero nos tenemos que registrar en la parte derecha del nav donde dice __registrarse__
+* Ademas de rellenar los datos pedidos nos preguntara que tipo de usuario queremos ser si de *Reserva* o de *Local*
+* ## Que ¿diferencia hay entre los dos usuarios?
+* El usuario de *reserva* solo puede reservar en los distintos locales que ofrece la aplicacion en el inicio.
+* El usuario de *local* puede subir su negocio para que los usuarios de *reserva* puedan verlo y reservar si quieren
+* Una vez creado el usuario, si es de *reserva* puede reservar cualquier local colocando los datos que le son requeridos en la app.
+* Si el usuario es de *local* ademas de subir los datos de su negocio tambien puede ver en una seccion llamada __reservas__ todas las reservas hechas por los usuarios.
+
+
+# Autor :pencil2:
+
+* *Alexis Crespo* -- [LinkedIn](https://www.linkedin.com/in/alexis-crespo-bb21a7170/) 
+
+# Agradecimientos
+
+* No tengo mas que agradecimientos a todo el equipo de Comunidad IT por brindarme la oportunidad de hacer este curso. Tambien una mencion especial a Richard, nuestro profesor, que siempre se sintio como si fuera un amigo, mas que un profesor, siempre con buena onda y tratando de hacernos entender todo dandonos la mayor cantidad de herramientas y hasta dando clases extras. Simplemente gracias! :gift_heart:
 
 
