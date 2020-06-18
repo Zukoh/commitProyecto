@@ -8,11 +8,14 @@
     <h1 class="title-contenido">Reservas</h1>
 
     <div class="content-reserva">
-        
+        {{#if reserva}}
         <p>Usuario: {{reserva.nombre}}</p>
         <p>Hora: {{reserva.hora}}</p>
         <p>Monto de reserva: {{reserva.montopagado}}</p>
         <p>Integrantes: {{reserva.cantidad}}</p>
         
+        {{else}}
+        <p>Por el momento no posee reservas</p>
+        {{/if}}
     </div>
 </div>

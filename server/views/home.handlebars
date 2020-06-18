@@ -9,14 +9,17 @@
     <div class="fila1">
         <div class="resto1">
             <div class="text-about">
-                <p>Nombre: Los Maizales</p>
-                <p>Direccion: Av Rivadavia 2500</p>
-                <p>Precio de Reserva: $500</p>
-                <p>Disponibilidad: De lunes a Viernes</p>
-                <p>Horario: De 08:00 hs a 02:00</p>
+                {{#if local}}
+                <p>Nombre: {{local.nombre}}</p>
+                <p>Direccion: {{local.direccion}}</p>
+                <p>Precio de Reserva: {{local.precioreserva}}</p>
+                <p>Disponibilidad: {{local.dispDias}}</p>
+                <p>Horario: {{local.dispHoras}}</p>
+                
                  <form action="/reservar" method="get">
                 <input class="reserva-btn" type="submit" value="Reservar!">
                 </form>
+              {{/if}}
             </div>
         </div>
         <div class="resto2">

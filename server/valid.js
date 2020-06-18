@@ -250,27 +250,81 @@ const newReserva = (nombre, montopag, cantpersonas, hora, cbR) =>{
 const dameReservas = (nombre, cbResult) => {
   mongodb.MongoClient.connect(mongoURL, (err, client) => {
     if (err) {
+      
       cbResult({
-        success: false
+        
+        valid: false
       });
+      
     } else {
       const proyectoDB = client.db("proyecto");
       const reservaCol = proyectoDB.collection("reservas");
-      reservaCol.findOne({ nombre: nombre }, (err, result) => {
+      reservaCol.findOne({ local: nombre }, (err, result) => {
         if (err) {
-          console.log(err);
+         
           cbResult({
             valid: false
           });
         } else {
-          console.log(result)
+          if(result!=null){
           cbResult({
             valid: true,
             nombre: result.nombre,
             montopagado: result.montopagado,
             cantpersonas: result.cantpersonas,
             hora:result.hora
+          
           });
+        } else{
+          cbResult({
+            valid: false
+          })
+        }
+        }
+
+        client.close();
+
+      });
+
+    }
+
+  });
+
+}
+
+const dameLocales = (nombre, cbResult) => {
+  mongodb.MongoClient.connect(mongoURL, (err, client) => {
+    if (err) {
+      
+      cbResult({
+        
+        valid: false
+      });
+      
+    } else {
+      const proyectoDB = client.db("proyecto");
+      const localCol = proyectoDB.collection("locales");
+      localCol.findOne({ nombre: nombre }, (err, result) => {
+        if (err) {
+         
+          cbResult({
+            valid: false
+          });
+        } else {
+          if(result!=null){
+          cbResult({
+            valid: true,
+            nombre: result.nombre,
+            direccion: result.direccion,
+            precioreserva: result.precioreserva,
+            dispDias:result.dispDias,
+            dispHoras:result.dispHoras
+          });
+        } else{
+          cbResult({
+            valid: false
+          })
+        }
         }
 
         client.close();
@@ -291,5 +345,6 @@ module.exports = {
   registerUser,
   postLocal,
   newReserva,
-  dameReservas
+  dameReservas,
+  dameLocales
 }

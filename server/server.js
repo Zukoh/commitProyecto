@@ -114,13 +114,9 @@ app.get("/eventos", (req, res) =>{
   res.render("eventos", { layout: "main" })
 })
 
-app.get("/home", (req, res) =>{
-  res.render("home", { layout: "main" })
-})
 
-app.get("/homelocal", (req, res) =>{
-  res.render("homelocal", { layout: "main" })
-})
+
+
 
 app.get("/boliches", (req, res) =>{
   res.render("boliches", { layout: "main" })
@@ -133,11 +129,42 @@ app.get("/canchas", (req, res) =>{
 app.get("/local", (req, res) =>{
   res.render("local", { layout: "main" })
 })
+app.get("/home", (req, res)=>{
+ 
+  valid.dameLocales("Los Maizales", result =>{
+    
+    if (result.valid){
+      
+      res.render("home", {
+        layout: "main", 
+        local: {
+          nombre: result.nombre,
+          direccion: result.direccion,
+          precioreserva: result.precioreserva,
+          dispDias:result.dispDias,
+          dispHoras:result.dispHoras
+      }
+    })
+    }
+    else{
+      res.render("home", {
+        layout: "main", 
+        local: {
+          nombre: "Los Maizales",
+          direccion: "Aguero 1224",
+          precioreserva: "580",
+          dispDias:"Lunes a Viernes",
+          dispHoras:"8 a 20."
+      }
+    })   
+  }
+})
+})
 
 app.get("/homelocal", (req, res)=>{
-  console.log("HOLAAA")
+ 
   valid.dameReservas("Los Maizales", result =>{
-    console.log(result.valid)
+    
     if (result.valid){
       
       res.render("homelocal", {
@@ -150,8 +177,12 @@ app.get("/homelocal", (req, res)=>{
       }
     })
     }
-  } )    
+    else{
+      res.render("homelocal", { layout: "main",  } )   
+  }
 })
+})
+
 app.get("/reservar", (req, res)=>{
   res.render("reservar", {layout: "main"})
   
@@ -184,7 +215,7 @@ app.post("/login", (req, res) => {
       res.render("home", { layout: "main", message: result.msg })
       }
       else{
-        res.render("homelocal", { layout: "main", message: result.msg })
+        res.render("local", { layout: "main", message: result.msg })
       }
     } else {
       // Se retorna el login con el error
