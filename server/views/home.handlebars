@@ -15,11 +15,18 @@
                 <p>Precio de Reserva: {{local.precioreserva}}</p>
                 <p>Disponibilidad: {{local.dispDias}}</p>
                 <p>Horario: {{local.dispHoras}}</p>
-                
+                {{else}}
+                <p>Nombre: Los Maizales</p>
+                <p>Direccion: Aguero 1224</p>
+                <p>Precio de Reserva: 500</p>
+                <p>Disponibilidad: Lunes a Viernes</p>
+                <p>Horario: 08:00 a 21:00</p>
+
+                {{/if}}
                  <form action="/reservar" method="get">
                 <input class="reserva-btn" type="submit" value="Reservar!">
                 </form>
-              {{/if}}
+              
             </div>
         </div>
         <div class="resto2">
