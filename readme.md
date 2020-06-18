@@ -8,7 +8,7 @@
 
 # ¿Que use en el proyecto ? :construction_worker:
 
-Utilice *HTML*, *Css*, *JS*, *NodeJS*, *Express* *mongoDB (Atlas)* y *Handlebars*.
+Utilice *HTML*, *Css*, *JS*, *NodeJS*, *Express*, *mongoDB (Atlas)* y *Handlebars*.
 
 # ¿Que necesito para correrlo? 
 
