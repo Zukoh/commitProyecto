@@ -15,7 +15,7 @@ Utilice *HTML*, *Css*, *JS*, *NodeJS*, *Express*, *mongoDB (Atlas)* y *Handlebar
 Simplemente tener instalado _NodeJS_**. 
 
 [NodeJS](https://nodejs.org/es/) :green_heart:
-
+n
 # ¿Como lo ejecuto una vez clonado el repositorio? :worried:
 
 * Ejecutar en la conosola el comando __npm install__
@@ -30,6 +30,13 @@ Simplemente tener instalado _NodeJS_**.
 * El usuario de *local* puede subir su negocio para que los usuarios de *reserva* puedan verlo y reservar si quieren
 * Una vez creado el usuario, si es de *reserva* puede reservar cualquier local colocando los datos que le son requeridos en la app.
 * Si el usuario es de *local* ademas de subir los datos de su negocio tambien puede ver en una seccion llamada __reservas__ todas las reservas hechas por los usuarios.
+
+# Cosas por hacer:
+
+* Mostrar todas las reservas no solo una
+* Manejo de sesiones, que cada usuario tenga su home propio con sus datos
+* Mejora de UX 
+* Optimizacion (Mejorar tema de Handlebars)
 
 
 # Autor :pencil2:
