@@ -35,8 +35,9 @@ n
 
 * Mostrar todas las reservas no solo una
 * Manejo de sesiones, que cada usuario tenga su home propio con sus datos
-* Mejora de UX 
 * Optimizacion (Mejorar tema de Handlebars)
+* Optimizacion Endpoints de server.js talvez routear ..
+* Mejora de UX
 
 
 # Autor :pencil2:
