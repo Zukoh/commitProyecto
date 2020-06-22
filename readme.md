@@ -31,9 +31,14 @@ n
 * Una vez creado el usuario, si es de *reserva* puede reservar cualquier local colocando los datos que le son requeridos en la app.
 * Si el usuario es de *local* ademas de subir los datos de su negocio tambien puede ver en una seccion llamada __reservas__ todas las reservas hechas por los usuarios.
 
-# Cosas por hacer:
+# To do List:
 
 * Mostrar todas las reservas no solo una
+* Poisibilidad de subir foto de local
+* Que el usuario de local pueda ver los datos de su negocio y pueda editar alguno (Ejemplo monto de reserva.. etc)
+* Validaciones en los registros (Dni, mail, edad.. etc)
+* Validacion con el monto de reserva e intentar simular una billetera o tarjeta
+* Simular pago
 * Manejo de sesiones, que cada usuario tenga su home propio con sus datos
 * Optimizacion (Mejorar tema de Handlebars)
 * Optimizacion Endpoints de server.js talvez routear ..
