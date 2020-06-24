@@ -247,7 +247,7 @@ const newReserva = (nombre, montopag, cantpersonas, hora, cbR) =>{
   })
 }
 
-const dameReservas = (nombre, cbResult) => {
+const dameReservas = (cbResult) => {
   mongodb.MongoClient.connect(mongoURL, (err, client) => {
     if (err) {
       
@@ -258,8 +258,8 @@ const dameReservas = (nombre, cbResult) => {
       
     } else {
       const proyectoDB = client.db("proyecto");
-      const reservaCol = proyectoDB.collection("reservas");
-      reservaCol.findOne({ local: nombre }, (err, result) => {
+      const localCol = proyectoDB.collection("reservas");
+      localCol.find().toArray((err, result) => {
         if (err) {
          
           cbResult({
@@ -267,15 +267,9 @@ const dameReservas = (nombre, cbResult) => {
           });
         } else {
           if(result!=null){
-          cbResult({
-            valid: true,
-            nombre: result.nombre,
-            montopagado: result.montopagado,
-            cantpersonas: result.cantpersonas,
-            hora:result.hora
-          
-          });
-        } else{
+           
+          cbResult(result)
+} else{
           cbResult({
             valid: false
           })
@@ -292,7 +286,7 @@ const dameReservas = (nombre, cbResult) => {
 
 }
 
-const dameLocales = (nombre, cbResult) => {
+const dameLocales = (cbResult) => {
   mongodb.MongoClient.connect(mongoURL, (err, client) => {
     if (err) {
       
@@ -304,7 +298,7 @@ const dameLocales = (nombre, cbResult) => {
     } else {
       const proyectoDB = client.db("proyecto");
       const localCol = proyectoDB.collection("locales");
-      localCol.findOne({ nombre: nombre }, (err, result) => {
+      localCol.find().toArray((err, result) => {
         if (err) {
          
           cbResult({
@@ -312,15 +306,9 @@ const dameLocales = (nombre, cbResult) => {
           });
         } else {
           if(result!=null){
-          cbResult({
-            valid: true,
-            nombre: result.nombre,
-            direccion: result.direccion,
-            precioreserva: result.precioreserva,
-            dispDias:result.dispDias,
-            dispHoras:result.dispHoras
-          });
-        } else{
+           
+          cbResult(result)
+} else{
           cbResult({
             valid: false
           })

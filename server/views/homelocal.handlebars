@@ -5,17 +5,14 @@
     
 </div>
 <div class="contenido">
-    <h1 class="title-contenido">Reservas</h1>
-
+    
+ 
+ {{#each reservas}}
     <div class="content-reserva">
-        {{#if reserva}}
-        <p>Usuario: {{reserva.nombre}}</p>
-        <p>Hora: {{reserva.hora}}</p>
-        <p>Monto de reserva: {{reserva.montopagado}}</p>
-        <p>Integrantes: {{reserva.cantidad}}</p>
-        
-        {{else}}
-        <p>Por el momento no posee reservas</p>
-        {{/if}}
+        <p>Usuario: {{this.nombre}}</p>
+        <p>Hora: {{this.hora}}</p>
+        <p>Monto de reserva: {{this.montopagado}}</p>
+        <p>Integrantes: {{this.cantpersonas}}</p>         
     </div>
+    {{/each}}
 </div>

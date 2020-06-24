@@ -4,73 +4,27 @@
     <a href="/boliches"><div class="boliches" id="boliches">Boliches</div></a>
     <a href="/canchas"><div class="canchas" id="canchas">Canchas</div></a>
 </div>
-<div class="contenido">
-    <h1 class="title-contenido">Restaurantes</h1>
-    <div class="fila1">
-        <div class="resto1">
-            <div class="text-about">
-                {{#if local}}
-                <p>Nombre: {{local.nombre}}</p>
-                <p>Direccion: {{local.direccion}}</p>
-                <p>Precio de Reserva: {{local.precioreserva}}</p>
-                <p>Disponibilidad: {{local.dispDias}}</p>
-                <p>Horario: {{local.dispHoras}}</p>
-                {{else}}
-                <p>Nombre: Los Maizales</p>
-                <p>Direccion: Aguero 1224</p>
-                <p>Precio de Reserva: 500</p>
-                <p>Disponibilidad: Lunes a Viernes</p>
-                <p>Horario: 08:00 a 21:00</p>
 
-                {{/if}}
-                 <form action="/reservar" method="get">
-                <input class="reserva-btn" type="submit" value="Reservar!">
-                </form>
-              
-            </div>
-        </div>
-        <div class="resto2">
-             <div class="text-about">
-                <p>Nombre: El imparcial</p>
-                <p>Direccion: Av mitre 1254</p>
-                <p>Precio de Reserva: $250</p>
-                <p>Disponibilidad: De lunes a Viernes</p>
-                <p>Horario: De 08:00 hs a 00:00</p>
-                 <form action="/reservar2" method="get">
-                <input class="reserva-btn" type="submit" value="Reservar!">
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="fila2">
-        <div class="resto3">
-             <div class="text-about">
-                <p>Nombre: La cuarteta</p>
-                <p>Direccion: Av. callao 2435</p>
-                <p>Precio de Reserva: $800</p>
-                <p>Disponibilidad: De lunes a lunes</p>
-                <p>Horario: De 10:00 hs a 00:00</p>
-                <form action="/reservar3" method="get">
-                <input class="reserva-btn" type="submit" value="Reservar!">
-                </form>
-            </div>
-        </div>
-        <div class="resto4">
-             <div class="text-about">
-                <p>Nombre: Guerrin</p>
-                <p>Direccion: Av. Siempre Viva</p>
-                <p>Precio de Reserva: $1500</p>
-                <p>Disponibilidad: De lunes a sabados</p>
-                <p>Horario: De 14:00 hs a 02:00</p>
-                 
-                 <form action="/reservar4" method="get">
+<div class="contenido">
+    
+    {{#each locales}}
+        <div class="cartas">
+                <p>Nombre: {{this.nombre}}</p>
+                <p>Direccion: {{this.direccion}}</p>
+                <p>Precio de Reserva: {{this.precioreserva}}</p>
+                <p>Disponibilidad: {{this.dispDias}}</p>
+                <p>Horario: {{this.dispHoras}}</p>
+            
+        <form action="/reservar" method="get">
                 <input class="reserva-btn" type="submit" value="Reservar!">
                 </form>
                 
             </div>
+            {{/each}}
         </div>
-    </div>
-</div>
+                    
+                 
+
 
 <script src="js/home.js"></script>
 

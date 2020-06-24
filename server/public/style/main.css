@@ -112,6 +112,9 @@ a{
 
 .contenido{
     display: inline-block;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
     position: absolute;
     height: 93vh;
     background: rgb(255, 255, 255);
@@ -125,118 +128,17 @@ a{
     text-align: center;
 }
 
-.resto1, .resto2, .resto3, .resto4, .cancha1, .cancha2, .cancha3, .cancha4, .boliche1, .boliche2, .boliche3, .boliche4, .evento1, .evento2, .evento3, .evento4{
-    height: 220px;
-    width: 350px;
-    background: red;
-    margin: 50px 20px 40px 20px;
-    position: relative;
-}
-.resto1{
-    background: url(../img/restaurantes/1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.evento1{
-    background: url(../img/eventos/1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.boliche1{
-    background: url(../img/boliches/1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
+.cartas{
+    background: rgba(0, 0, 0, 0.5);
+    height: 210px;
+    width: 290px;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    
 }
 
-.cancha1{
-    background: url(../img/canchas/1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
 
-.resto2{
-    background: url(../img/restaurantes/2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.evento2{
-    background: url(../img/eventos/2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.boliche2{
-    background: url(../img/boliches/2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.cancha2{
-    background: url(../img/canchas/2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-
-.resto3{
-    background: url(../img/restaurantes/3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.evento3{
-    background: url(../img/eventos/3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.boliche3{
-    background: url(../img/boliches/3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.cancha3{
-    background: url(../img/canchas/3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.resto4{
-    background: url(../img/restaurantes/4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.evento4{
-    background: url(../img/eventos/4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.boliche4{
-    background: url(../img/boliches/4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-.cancha4{
-    background: url(../img/canchas/4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-
-.fila1, .fila2{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-}
 
 /* CSS LOCALES */
 .content-reserva{

@@ -131,55 +131,28 @@ app.get("/local", (req, res) =>{
 })
 app.get("/home", (req, res)=>{
  
-  valid.dameLocales("Los Maizales", result =>{
+  valid.dameLocales( result =>{
+    console.log(result)  
     
-    if (result.valid){
+      res.render("home", {
+        layout: "main", 
+        
+         locales : result
       
-      res.render("home", {
-        layout: "main", 
-        local: {
-          nombre: result.nombre,
-          direccion: result.direccion,
-          precioreserva: result.precioreserva,
-          dispDias:result.dispDias,
-          dispHoras:result.dispHoras
-      }
     })
-    }
-    else{
-      res.render("home", {
-        layout: "main", 
-        local: {
-          nombre: "Los Maizales",
-          direccion: "Aguero 1224",
-          precioreserva: "580",
-          dispDias:"Lunes a Viernes",
-          dispHoras:"8 a 20."
-      }
-    })   
-  }
+  })     
 })
-})
+
 
 app.get("/homelocal", (req, res)=>{
  
-  valid.dameReservas("Los Maizales", result =>{
+  valid.dameReservas(result =>{
     
-    if (result.valid){
-      
+      console.log("aca ya estamos en el endpoint del sv..", result)
       res.render("homelocal", {
         layout: "main", 
-        reserva: {
-            nombre: result.nombre,
-            hora: result.hora,
-            montopagado:result.montopagado,
-            cantidad:result.cantpersonas
-      }
+        reservas: result
     })
-    }
-    else{
-      res.render("homelocal", { layout: "main",  } )   
-  }
 })
 })
 
