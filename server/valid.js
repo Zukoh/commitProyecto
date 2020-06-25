@@ -157,7 +157,7 @@ const registerUser = (username, password, dni, edad, userReserva, userLocal, cbR
           cbResult(false);
         } else {
           cbResult(true);
-          // console.log(result);
+          
         }
 
         client.close();
