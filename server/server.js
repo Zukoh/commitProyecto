@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const expHbs = require("express-handlebars");
 const bodyParser = require("body-parser");
+const multer = require("multer");
 
 const valid = require("./valid");
 
@@ -18,6 +19,33 @@ app.set("views", path.join(__dirname, "views"));
 
 // Ruta base de recursos estáticos
 app.use(express.static(path.join(__dirname, "public")));
+
+// Configuracion Multer
+
+const storage = multer.diskStorage({
+  destination: path.join(__dirname, "public/img/locales"),
+ filename:(req, file, cb) => {
+   cb(null, file.originalname);
+ }
+});
+
+app.use(multer({
+  storage,
+  dest:path.join(__dirname, "public/img/locales"),
+  limits: 5000000,
+  fileFilter:(req,file,cb) => {
+    const filetypes= /jpeg|jpg/
+    const mimetype = filetypes.test(file.mimetype)
+    const extName = filetypes.test(path.extname(file.originalname))
+
+    if (mimetype && extName) {
+      return cb(null, true)
+    } else{
+      cb("Error , el archivo debe ser jpg, jpeg o gif..")
+    }
+  }
+}).single('imagelocal'));
+
 
 // Body Parser para Content-Type "application/x-www-form-urlencoded"
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -132,7 +160,7 @@ app.get("/local", (req, res) =>{
 app.get("/home", (req, res)=>{
  
   valid.dameLocales( result =>{
-    console.log(result)  
+  
     
       res.render("home", {
         layout: "main", 
@@ -145,10 +173,8 @@ app.get("/home", (req, res)=>{
 
 
 app.get("/homelocal", (req, res)=>{
- 
+  
   valid.dameReservas(result =>{
-    
-      console.log("aca ya estamos en el endpoint del sv..", result)
       res.render("homelocal", {
         layout: "main", 
         reservas: result
@@ -185,7 +211,7 @@ app.post("/login", (req, res) => {
     if (result.valid) {
       // Renderizado de home con datos de personas
       if(result.msg === "reserva"){
-      res.render("home", { layout: "main", message: result.msg })
+      res.redirect("home")
       }
       else{
         res.render("local", { layout: "main", message: result.msg })
@@ -200,7 +226,7 @@ app.post("/login", (req, res) => {
 });
 
 app.post("/local", (req, res)=>{
-  valid.postLocal(req.body.nombre, req.body.direccion, req.body.minReserva, req.body.diaDesde, req.body.horarios, result =>{
+  valid.postLocal(req.body.nombre, req.body.direccion, req.body.minReserva, req.body.diaDesde, req.body.horarios, req.file.filename, result =>{
     if (result.valid){
       res.render("local", {
         layout: "main", 

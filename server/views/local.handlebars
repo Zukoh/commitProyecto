@@ -9,7 +9,7 @@
     <h1 class="title-contenido">Datos de tu local</h1>
     <p class="subt-disp">Por favor ingrese los datos pedidos de su local para que los clientes lo puedan ver</p>
   <div class="content-disponibilidad">
-    <form action="/local" method="post">
+    <form action="/local" method="post" enctype="multipart/form-data">
   
   <div class="input-group">
     <label for="nombre">Nombre del local:</label>
@@ -35,8 +35,12 @@
   <div class="input-group">
     <label for="horarios">Horarios, de:</label>
     <input type="text" name="horarios" id="horarios">
-    
+  </div>
 
+  
+   <div class="input-group">
+    <label for="imagelocal">Foto del local:</label>
+    <input type="file" name="imagelocal" id="imagelocal">
   </div>
 
   <input class="local-btn" type="submit" value="Aplicar!">

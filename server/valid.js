@@ -169,7 +169,7 @@ const registerUser = (username, password, dni, edad, userReserva, userLocal, cbR
 }
 
 
-const postLocal = (nombre, dir, preserva, dispDias, dispHoras, cbR) =>{
+const postLocal = (nombre, dir, preserva, dispDias, dispHoras, localPic, cbR) =>{
   //Me conecto a mongoDB
   mongodb.MongoClient.connect(mongoURL, (err, client) =>{
     if(err){
@@ -187,7 +187,8 @@ const postLocal = (nombre, dir, preserva, dispDias, dispHoras, cbR) =>{
         direccion: dir,
         precioreserva: preserva,
         dispDias: dispDias,
-        dispHoras : dispHoras
+        dispHoras : dispHoras,
+        localPic : localPic
       };
 
       localCol.insertOne(newLocal, (err, resultado) =>{
