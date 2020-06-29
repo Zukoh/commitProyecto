@@ -33,8 +33,6 @@ n
 
 # To do List:
 
-* Mostrar todas las reservas no solo una
-* Poisibilidad de subir foto de local
 * Que el usuario de local pueda ver los datos de su negocio y pueda editar alguno (Ejemplo monto de reserva.. etc)
 * Validaciones en los registros (Dni, mail, edad.. etc)
 * Validacion con el monto de reserva e intentar simular una billetera o tarjeta
